@@ -1,3 +1,6 @@
+// script.js
+
+// Define a data inicial do relacionamento
 const startDate = new Date("2023-08-11T00:00:00");
 
 function updateCount() {
@@ -17,7 +20,8 @@ function updateCount() {
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     // Atualiza o elemento com o id "count"
-    document.getElementById("count").textContent = `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+    document.getElementById("count").textContent = 
+        `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
 }
 
 // Atualiza imediatamente e configura o intervalo de atualização
