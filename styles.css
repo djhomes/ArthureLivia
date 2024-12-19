@@ -1,58 +1,73 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
     background-color: #000; /* Fundo preto */
     font-family: 'Georgia', serif;
     color: #ffffff;
-    flex-direction: column;
 }
 
-.count-since {
+header h1 {
     text-align: center;
-    background: rgba(0, 0, 0, 0.8); 
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); 
-    color: #ff69b4; 
+    font-size: 1.8em;
+    color: #ff69b4;
     margin-bottom: 20px;
 }
 
+/* Estilo para o contador */
+.count-since {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+    color: #ff69b4;
+    margin-bottom: 20px;
+    width: 100%; /* Responsivo */
+    max-width: 400px;
+}
 
 .count-since h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #ff69b4; 
+    font-size: 1.8em;
+    color: #ff69b4;
 }
-
 
 .count-since p {
-    font-size: 1.2em;
-    color: #ffb6c1; 
+    font-size: 1em;
+    color: #ffb6c1;
 }
 
+/* Estilo para imagem */
 .intemImagem img {
-    max-width: 80%; 
-    max-height: 400px; 
-    object-fit: contain; 
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); 
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
 }
 
-.itemImagem{
-    background-color: #ffffff;
-    padding: 30px; 
-    border-radius: 8px;
-    text-align: center;
-    width: 250px; 
-    height: 350px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
 
-.Imagem {
-    width: 50%;
-    height: 50%;
+    .count-since h1 {
+        font-size: 1.5em;
+    }
+
+    .count-since p {
+        font-size: 0.9em;
+    }
 }
